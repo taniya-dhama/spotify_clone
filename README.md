@@ -1,8 +1,8 @@
-##Overview
+## Overview
 Spotify Clone is a frontend web development project that replicates the basic interface and music-player functionality of Spotify. It provides an interactive and responsive platform where users can browse songs, view playlists, and control music playback. The project uses HTML, CSS, and JavaScript to create the user interface and implement features such as play, pause, next, previous, volume control, and song progress. It also demonstrates practical concepts such as DOM manipulation, event handling, responsive design, and browser-based audio functionality. The project was developed to strengthen frontend development skills and gain practical experience in building an interactive music streaming interface.
 
 
-##Tech Stack
+## Tech Stack
 - HTML5
 - CSS3
 - JavaScript
