@@ -32,8 +32,9 @@
                 <div class="play">
                     <div class="text">Create your first playlist</div>
                     <div class="text2">It's easy,we'll help you</div>
-                    <button>Create playlist</button>
+                    <button id="create-playlist-btn">Create playlist</button>
                 </div>
+                <div id="playlists-container"></div>
                 <div class="pod">
                     <div class="text3">Let's find some podcasts to follow</div>
                     <div class="text4">We'll keep you updated on new episodes</div>
@@ -58,7 +59,7 @@
                     <img src="image1.png" height="30px" alt="">
                     <img src="image.png" height="30px" alt="">
                 </div>
-                <div class="buttons">
+                <div class="buttons" id="auth-buttons">
                     <button class="signbtn">Signup</button>
                     <button class="loginbtn">Login</button>
                 </div>
@@ -192,10 +193,11 @@
                     <div class="playbtn">
                         <img src="https://ico.hugeicons.com/previous-stroke-rounded@2x.webp?x=432087497" height="20px"
                             alt="">
-                        <img id="play-pause-btn" src="https://ico.hugeicons.com/play-stroke-rounded@2x.webp?x=1330058034"
-                            height="20px">
+                        <img id="play-pause-btn"
+                            src="https://ico.hugeicons.com/play-stroke-rounded@2x.webp?x=1330058034" height="20px">
                         <img src="https://ico.hugeicons.com/next-stroke-rounded@2x.webp?x=1715228558" height="20px"
                             alt="">
+                        <button id="stop-btn">Stop</button
                     </div>
                     <div class="seek-container">
                         <span id="current-time">0:00</span>
@@ -207,30 +209,40 @@
         </div>
     </div>
     <!-- Signup Modal -->
-<div id="signup-modal" class="modal hidden">
-  <div class="modal-content">
-    <span class="close-btn" id="close-signup">&times;</span>
-    <h2>Sign up</h2>
-    <input type="text" id="signup-username" placeholder="Username">
-    <input type="email" id="signup-email" placeholder="Email">
-    <input type="password" id="signup-password" placeholder="Password">
-    <button id="signup-submit">Create account</button>
-    <p id="signup-error" class="error-text"></p>
-  </div>
-</div>
+    <div id="signup-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-signup">&times;</span>
+            <h2>Sign up</h2>
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button id="signup-submit">Create account</button>
+            <p id="signup-error" class="error-text"></p>
+        </div>
+    </div>
 
-<!-- Login Modal -->
-<div id="login-modal" class="modal hidden">
-  <div class="modal-content">
-    <span class="close-btn" id="close-login">&times;</span>
-    <h2>Log in</h2>
-    <input type="email" id="login-email" placeholder="Email">
-    <input type="password" id="login-password" placeholder="Password">
-    <button id="login-submit">Log in</button>
-    <p id="login-error" class="error-text"></p>
-  </div>
-</div>
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-login">&times;</span>
+            <h2>Log in</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button id="login-submit">Log in</button>
+            <p id="login-error" class="error-text"></p>
+        </div>
+    </div>
     <audio id="audio"></audio>
+    <div id="playlist-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-playlist">&times;</span>
+            <h2>Create Playlist</h2>
+            <input type="text" id="playlist-name" placeholder="Playlist name">
+            <div id="song-checklist"></div>
+            <button id="playlist-submit">Save Playlist</button>
+            <p id="playlist-error" class="error-text"></p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 
