@@ -1,13 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.left{
-    width:20vw;
+
+.left {
+    width: 20vw;
     height: 100vh;
     flex-shrink: 0;
 
 }
+
 .right {
     width: 80vw;
     height: 100vh;
@@ -20,41 +22,44 @@
     position: relative;
     overflow: hidden;
 }
-.border{
+
+.border {
     border: 2px solid rgb(212, 198, 198);
     margin: 3px;
 }
-.container{
+
+.container {
     display: flex;
     overflow: hidden;
     height: 100vh;
 }
-.box1{
+
+.box1 {
     height: 25vh;
-    border:2px solid rgb(212, 206, 206);
+    border: 2px solid rgb(212, 206, 206);
     border-radius: 10px;
     padding: 20px;
     background-color: rgb(23, 22, 22);
     border: none;
     margin: 7px;
-    
+
 }
-.box2{
+
+.box2 {
     border: 2px solid white;
     border-radius: 10px;
     height: 68vh;
     background-color: rgb(23, 22, 22);
     border: none;
-    margin:7px
-
+    margin: 7px
 }
 
-.logo li{
+.logo li {
     list-style-type: none;
     display: flex;
 }
 
-.blue{
+.blue {
     position: relative;
     margin-top: 20px;
     gap: 7px;
@@ -62,52 +67,61 @@
     font-size: small;
 }
 
-li h3{
+li h3 {
     position: relative;
     margin-top: 12px;
 }
-body{
+
+body {
     color: white;
     background-color: black;
 }
-.red{
+
+.red {
     margin: -10px;
     position: relative;
     top: -25px;
     left: -10px;
 
 }
-.pink{
+
+.pink {
     gap: 7px;
     font-size: small;
 }
-.to{
+
+.to {
     position: relative;
     top: -5px;
     font-size: 20px;
     left: 20px;
 }
-span img{
+
+span img {
     position: relative;
     left: 20px;
     top: 10px;
 }
-.footer{
+
+.footer {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
-    position: relative;
-    left: -10px;
-    bottom: 5px;
-
-    }
-.footer a{
-    color: white;
-    position: relative;
-    top: 100px;
-    left: 20px;
+    gap: 10px 14px;
+    padding: 0 16px;
+    margin-top: 12px;
 }
-.play{
+
+.footer a {
+    color: #a7a7a7;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.play {
     background-color: rgb(29, 25, 25);
     padding: 20px;
     position: relative;
@@ -117,44 +131,49 @@ span img{
     font-size: large;
 
 }
+
 .pod{
     background-color: rgb(29, 25, 25);
     padding: 15px;
-    position: relative;
-    top: 30px;
     height: 100px;
     border-radius: 40px;
     font-size: large;
     margin-top: 10px;
-
+    margin-bottom: 15px;
 }
-.text{
+
+.text {
     padding: 2px;
 }
-.pod button{
+
+.pod button {
     padding: 5px;
     border-radius: 10px;
     position: relative;
     top: 8px;
     font-weight: 600;
 }
-.play button{
+
+.play button {
     padding: 5px;
     border-radius: 10px;
     position: relative;
     top: 10px;
-    font-weight:600;
+    font-weight: 600;
 }
-.buttons{
+
+.buttons {
     color: white;
     padding: 10px;
     margin: 5px;
 }
-.buttons button{
+
+.buttons button {
     padding: 12px;
     border-radius: 25px;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
     background-color: rgb(61, 53, 53);
@@ -162,16 +181,19 @@ span img{
     margin: 5px;
 }
 
-.navs{
+.navs {
     margin: 10px;
 }
-.navs *{
+
+.navs * {
     filter: invert();
 }
-.buttons *{
+
+.buttons * {
     border-radius: 8px;
     padding: 5px;
 }
+
 .playlist {
     padding: 16px;
     font-size: small;
@@ -179,141 +201,166 @@ span img{
     box-sizing: border-box;
     overflow-y: auto;
 }
-.card1{
-    border: 2px sold black;
+
+.card1 {
+    border: 2px solid black;
     background-color: rgb(13, 11, 11);
     width: 170px;
-    height: 250px;
+    height: auto;
+    min-height: 250px;
     padding: 15px;
     border-radius: 5px;
 }
-.card2{
-    border: 2px sold black;
+
+.card2 {
+    border: 2px solid black;
     background-color: rgb(13, 11, 11);
     width: 170px;
-    height: 250px;
+    height: auto;
+    min-height: 250px;
     padding: 15px;
     border-radius: 5px;
 }
-.card3{
-    border: 2px sold black;
+
+.card3 {
+    border: 2px solid black;
     background-color: rgb(13, 11, 11);
     width: 170px;
-    height: 250px;
+    height: auto;
+    min-height: 250px;
     padding: 15px;
     border-radius: 5px;
 }
-.card4{
-    border: 2px sold black;
+
+.card4 {
+    border: 2px solid black;
     background-color: rgb(13, 11, 11);
     width: 170px;
-    height: 250px;
+    height: auto;
+    min-height: 250px;
     padding: 15px;
     border-radius: 5px;
 }
-.card5{
-    border: 2px sold black;
+
+.card5 {
+    border: 2px solid black;
     background-color: rgb(13, 11, 11);
     width: 170px;
-    height: 250px;
+    height: auto;
+    min-height: 250px;
     padding: 15px;
     border-radius: 5px;
 }
-.card6{
-    border: 2px sold black;
+
+.card6 {
+    border: 2px solid black;
     background-color: rgb(13, 11, 11);
     width: 170px;
-    height: 170px;
+    height: auto;
+    min-height: 250px;
     padding: 15px;
     border-radius: 5px;
-    position: relative;
-    bottom: 20px;
 }
-.card7{
-    border: 2px sold black;
+
+.card7 {
+    border: 2px solid black;
     background-color: rgb(13, 11, 11);
     width: 170px;
-    height: 170px;
+    height: auto;
+    min-height: 250px;
     padding: 15px;
     border-radius: 5px;
-    position: relative;
-    bottom: 20px;
 }
-.cards{
+
+.cards {
     padding-top: 10px;
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
 }
-.card1 h1{
+
+.card1 h1 {
     font-weight: 600;
 }
-.card1 div{
+
+.card1 div {
     position: relative;
     top: 170px;
     left: 130px;
     box-sizing: border-box;
 }
-.card2 div{
+
+.card2 div {
     position: relative;
     top: 170px;
     left: 130px;
     box-sizing: border-box;
 }
-.card3 div{
+
+.card3 div {
     position: relative;
     top: 170px;
     left: 130px;
     box-sizing: border-box;
 }
-.card4 div{
+
+.card4 div {
     position: relative;
     top: 170px;
     left: 130px;
     box-sizing: border-box;
 }
-.card5 div{
+
+.card5 div {
     position: relative;
     top: 170px;
     left: 130px;
     box-sizing: border-box;
 }
-.card1 div{
+
+.card1 div {
     opacity: 0;
     transition: all 1s ease-out;
-    
+
 }
-.card2 div{
+
+.card2 div {
     opacity: 0;
     transition: all 1s ease-out;
-    
+
 }
-.card3 div{
+
+.card3 div {
     opacity: 0;
     transition: all 1s ease-out;
-    
+
 }
-.card4 div{
+
+.card4 div {
     opacity: 0;
     transition: all 1s ease-out;
-    
+
 }
-.card5 div{
+
+.card5 div {
     opacity: 0;
     transition: all 1s ease-out;
-    
+
 }
-.card6 div{
+
+.card6 div {
     opacity: 0;
     transition: all 1s ease-out;
-    
+
 }
-.card7 div{
+
+.card7 div {
     opacity: 0;
     transition: all 1s ease-out;
-    
+
 }
-.foot li{
+
+.foot li {
     list-style-type: none;
 }
 
@@ -339,140 +386,150 @@ span img{
     height: 30px;
 }
 
-.li{
+.li {
     font-weight: bolder;
     color: rgb(147, 130, 130);
 }
-.img2{
+
+.img2 {
     padding: 2px;
 }
 
-.img3{
+.img3 {
     padding: 2px;
 }
-.img{
+
+.img {
     position: relative;
     top: 6px;
     left: 2px;
 }
-.card1 div:hover{
-    opacity: 1;
-    transition: all 0.1s linear;
-}
-.card2 div:hover{
-    opacity: 1;
-    transition: all 0.1s linear;
-}
-.card3 div:hover{
-    opacity: 1;
-    transition: all 0.1s linear;
-}
-.card4 div:hover{
+
+.card1:hover div {
     opacity: 1;
     transition: all 0.1s linear;
 }
 
-.card5 div:hover{
+.card2:hover div {
     opacity: 1;
     transition: all 0.1s linear;
 }
 
-.card6 div:hover{
+.card3:hover div {
     opacity: 1;
     transition: all 0.1s linear;
 }
-.card7 div:hover{
+
+.card4:hover div {
     opacity: 1;
     transition: all 0.1s linear;
 }
-.card7 div{
+
+.card5:hover div {
+    opacity: 1;
+    transition: all 0.1s linear;
+}
+
+.card6:hover div {
+    opacity: 1;
+    transition: all 0.1s linear;
+}
+
+.card7:hover div {
+    opacity: 1;
+    transition: all 0.1s linear;
+}
+
+.card7 div {
     position: absolute;
     box-sizing: border-box;
     left: 160px;
     top: 157px;
 
 }
-.card6 div{
+
+.card6 div {
     position: absolute;
     box-sizing: border-box;
     left: 158px;
     top: 157px;
 
 }
-.signbtn{
+
+.signbtn {
     font-weight: 600;
     width: 80px;
     font-size: 16px;
 }
-.loginbtn{
+
+.loginbtn {
     font-weight: 600;
     width: 70px;
     font-size: 16px;
 }
-.signbtn:hover{
+
+.signbtn:hover {
     font-size: 17px;
     color: rgb(62, 54, 54);
-}
-.loginbtn:hover{
-    font-size: 17px;
-    color: rgb(62, 54, 54);
-}
-.playbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #181818;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  box-sizing: border-box;
 }
 
-.nowplaying {
-  color: #fff;
-  font-size: 14px;
-  min-width: 150px;
+.loginbtn:hover {
+    font-size: 17px;
+    color: rgb(62, 54, 54);
+}
+
+.playbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #534545;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
 }
 
 .playbtn {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 6px;
 }
 
 .seek-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #b3b3b3;
-  font-size: 12px;
-  min-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b3b3b3;
+    font-size: 12px;
+    width: 100%;
 }
 
 #seekbar {
-  flex: 1;
-  cursor: pointer;
-  accent-color: #1DB954;
+    flex: 1;
+    cursor: pointer;
+    accent-color: #3e7551;
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
 .modal.hidden {
-  display: none;
+    display: none;
 }
 
 .modal-content {
@@ -480,41 +537,227 @@ span img{
   padding: 30px;
   border-radius: 8px;
   width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
   position: relative;
   color: #fff;
 }
 
-.modal-content input {
-  display: block;
-  width: 100%;
-  padding: 10px;
+#song-checklist {
+  max-height: 200px;
+  overflow-y: auto;
   margin: 10px 0;
-  border-radius: 4px;
-  border: none;
-  box-sizing: border-box;
+  padding-right: 6px;
+}
+
+.modal-content input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
 }
 
 .modal-content button {
-  width: 100%;
-  padding: 10px;
-  background: #1DB954;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background: #1DB954;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .error-text {
-  color: #ff4d4d;
-  font-size: 13px;
-  min-height: 16px;
+    color: #ff4d4d;
+    font-size: 13px;
+    min-height: 16px;
+}
+
+#playlists-container {
+    margin-top: 15px;
+    padding: 0 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.artist-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.artist-card {
+    position: relative;
+    width: 170px;
+    text-align: center;
+    color: white;
+}
+
+.artist-card .artist-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.artist-card .play-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+}
+
+.artist-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.playlist h1:nth-of-type(2) {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7 {
+    position: relative;
+}
+
+.artist-card .play-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.artist-card:hover .play-btn {
+    opacity: 1;
+}
+
+.album-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.album-card {
+    position: relative;
+    width: 170px;
+    background-color: rgb(13, 11, 11);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.album-card .album-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.album-card h3 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.album-card .album-artist {
+    color: #b3b3b3;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.album-card .play-btn {
+    position: absolute;
+    bottom: 65px;
+    right: 25px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.album-card:hover .play-btn {
+    opacity: 1;
+}
+
+.section-title {
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+    overflow: hidden;
+}
+
+.card1 p,
+.card2 p,
+.card3 p,
+.card4 p,
+.card5 p {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+#hello{
+    margin-top: 80px;
+}
+.podcast-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.podcast-card {
+  width: 170px;
+  background-color: rgb(13, 11, 11);
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+.podcast-card .podcast-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.podcast-card h3 {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.podcast-card p {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+#back-to-home-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #1DB954;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
