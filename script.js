@@ -1,6 +1,5 @@
 const audio = document.getElementById('audio');
 const playButtons = document.querySelectorAll('.play-btn');
-const nowPlayingName = document.getElementById('current-song-name');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 const seekbar = document.getElementById('seekbar');
@@ -30,6 +29,9 @@ function formatTime(seconds) {
   return `${min}:${sec}`;
 }
 
+let currentPlaylistSongs = [];
+let currentPlaylistIndex = 0;
+
 playButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     const src = btn.getAttribute('data-src');
@@ -40,7 +42,10 @@ playButtons.forEach(btn => {
     } else {
       audio.src = src;
       audio.play();
-      nowPlayingName.textContent = name;   // show the song name in the playbar
+
+      // Set this as the current queue so next/prev can navigate through all songs
+      currentPlaylistSongs = songLibrary;
+      currentPlaylistIndex = songLibrary.findIndex(song => song.src === src);
     }
   });
 });
@@ -56,18 +61,29 @@ audio.addEventListener('loadedmetadata', () => {
   durationEl.textContent = formatTime(audio.duration);
 });
 
-const stopBtn = document.getElementById('stop-btn');
-
-stopBtn.addEventListener('click', () => {
-  audio.pause();
-  audio.currentTime = 0;
-  currentPlaylistSongs = []; // stop auto-advancing to next song
-  nowPlayingName.textContent = 'No song playing';
-});
-
 // Let the user drag the seekbar to jump to a point in the song
 seekbar.addEventListener('input', () => {
   audio.currentTime = (seekbar.value / 100) * audio.duration;
+});
+
+// Play / pause toggle button
+const playPauseBtn = document.getElementById('play-pause-btn');
+
+playPauseBtn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+// Keep the icon in sync with actual playback state
+audio.addEventListener('play', () => {
+  playPauseBtn.src = 'https://ico.hugeicons.com/pause-stroke-rounded@2x.webp?x=1330058034';
+});
+
+audio.addEventListener('pause', () => {
+  playPauseBtn.src = 'https://ico.hugeicons.com/play-stroke-rounded@2x.webp?x=1330058034';
 });
 
 // Build a songs array directly from your existing play buttons
@@ -138,7 +154,8 @@ function renderPlaylists() {
     </div>
   `).join('');
 }
- playlistsContainer.addEventListener('click', (e) => {
+
+playlistsContainer.addEventListener('click', (e) => {
   const playlistEl = e.target.closest('.user-playlist');
   if (!playlistEl) return;
 
@@ -147,9 +164,6 @@ function renderPlaylists() {
 
   playCurrentPlaylist(playlist);
 });
-
-let currentPlaylistSongs = [];
-let currentPlaylistIndex = 0;
 
 function playCurrentPlaylist(playlist) {
   currentPlaylistSongs = playlist.songs;
@@ -163,7 +177,6 @@ function playSongAtIndex(index) {
 
   audio.src = song.src;
   audio.play();
-  nowPlayingName.textContent = song.name;
 }
 
 // When a song ends, auto-advance to the next one in the current playlist
@@ -177,6 +190,50 @@ audio.addEventListener('ended', () => {
     currentPlaylistSongs = []; // playlist finished
   }
 });
+
+// Previous / Next buttons
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+prevBtn.addEventListener('click', () => {
+  if (currentPlaylistSongs.length === 0) return;
+
+  currentPlaylistIndex--;
+  if (currentPlaylistIndex < 0) {
+    currentPlaylistIndex = currentPlaylistSongs.length - 1; // wrap to last song
+  }
+  playSongAtIndex(currentPlaylistIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+  if (currentPlaylistSongs.length === 0) return;
+
+  currentPlaylistIndex++;
+  if (currentPlaylistIndex >= currentPlaylistSongs.length) {
+    currentPlaylistIndex = 0; // wrap to first song
+  }
+  playSongAtIndex(currentPlaylistIndex);
+});
+
+// Home / About modal
+const homeBtn = document.getElementById('home-btn');
+
+// Podcasts view switching
+const mainView = document.getElementById('main-view');
+const podcastsView = document.getElementById('podcasts-view');
+const browsePodcastsBtn = document.getElementById('browse-podcasts-btn');
+const backToHomeBtn = document.getElementById('back-to-home-btn');
+
+browsePodcastsBtn.addEventListener('click', () => {
+  mainView.classList.add('hidden');
+  podcastsView.classList.remove('hidden');
+});
+
+backToHomeBtn.addEventListener('click', () => {
+  podcastsView.classList.add('hidden');
+  mainView.classList.remove('hidden');
+});
+
 const signupSubmit = document.getElementById('signup-submit');
 const loginSubmit = document.getElementById('login-submit');
 const signupError = document.getElementById('signup-error');
